@@ -31,7 +31,7 @@ html {
 }
 
 .header_container .logo ul li {
-    transition: 2s;
+    transition: .9s;
     transition-delay: .5s;
     list-style-type: none;
     padding: 15px;
@@ -94,7 +94,7 @@ html {
 
 .main_container .about {
     width: 100%;
-    height: 250px;
+    height: 270px;
     background-color: rgb(158, 161, 161);
     margin: auto;
     box-sizing: border-box;
@@ -130,13 +130,14 @@ html {
 
 .main_container .contact {
     width: 100%;
-    height: 250px;
+    height: 280px;
     background-color: rgb(158, 161, 161);
     margin: auto;
 }
 
 .main_container .contact p {
     padding: 25px;
+    height: auto;
 }
 
 .main_container .contact p img {
@@ -196,7 +197,16 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.main_container .bg4 {
+    background-image: url("../img/1200.png");
+    width: 100%;
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
 
 /* ******************************************* */
 
@@ -228,17 +238,19 @@ html {
 }
 
 .main_container .ParallaxVideo {
+    max-width: 100%;
     height: 300px;
     padding-bottom: 50px;
     padding-top: 50px;
 }
 
 .main_container .ParallaxVideo video {
-    min-width: 68%;
+    max-width: 100%;
     position: fixed;
-    top: -62px;
-    left: 2.5%;
-    z-index: -3599999999;
+    top: -12px;
+     left: .5%;
+    z-index: -3599999;
+    height: auto;
 }
 
 
@@ -323,6 +335,7 @@ html {
         display: block;
         position: fixed;
         left: 0;
+        z-index: 15;
     }
     .dropdown {
         position: relative;
@@ -359,15 +372,36 @@ html {
         height: auto;
         background: greenyellow;
     }
+    .main_container .bg4{
+        display: block;
+    }
     .main_container .video {
         display: block;
         width: 100%;
-        height: 800px;
+        height: 240px;
     }
     .main_container .video video {
-        /* display: block; */
+         display: block;
         width: 100%;
-        height: 500px;
+        height: 241px;
+    }
+    .main_container .ParallaxVideo{
+        display: none;
+    }
+    .footer_container .col_3 {
+        width: 25px;
+        height: 40px;
+        background-color: red;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1555;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 39px;
+        scroll-behavior: smooth;
+        transition: 2.5s;
     }
 }
 
@@ -377,23 +411,24 @@ html {
     .main_container .contact,
     .main_container .news,
     .main_container .blog {
-        display: none;
+        display: block;
     }
     .main_container .bg1,
     .main_container .bg2,
     .main_container .bg3,
     .main_container .bg4 {
-        display: none;
+        display: block;
     }
     .main_container {
         background-image: none;
     }
     .main_container .video {
-        display: block;
-        width: 100%;
-        height: 800px;
+        display: none;
     }
     .main_container .video video {
+        display: none;
+    }
+    .main_container .ParallaxVideo{
         display: none;
     }
 }
